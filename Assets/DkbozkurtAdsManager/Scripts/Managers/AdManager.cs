@@ -40,9 +40,9 @@ namespace DkbozkurtAdsManager.Scripts.Managers
         {
             // CallBanner();
 
-            // CallInterstitial();
+            CallInterstitial();
 
-            CallRewarded();
+            //CallRewarded();
         }
 
         #region Banner
@@ -110,6 +110,11 @@ namespace DkbozkurtAdsManager.Scripts.Managers
 
             // Initialize an InterstitialAd.
             this._interstitialAd = new InterstitialAd(adUnitId);
+            
+            // Create an empty ad request.
+            AdRequest request = new AdRequest.Builder().Build();
+            // Load the interstitial with the request.
+            this._interstitialAd.LoadAd(request);
         }
 
         #endregion
