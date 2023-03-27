@@ -17,7 +17,7 @@ namespace DkbozkurtAdsManager.Scripts.Managers
     /// Ref : https://www.youtube.com/watch?v=KKL3k-Uk5JU
     /// Ref : https://developers.google.com/admob/unity/app-open
     /// </summary>
-    public class AdManager : SingletonBehaviour<AdManager>
+    public class AdMobManager : SingletonBehaviour<AdMobManager>
     {
         protected override void OnAwake() { }
         
@@ -36,15 +36,6 @@ namespace DkbozkurtAdsManager.Scripts.Managers
         
         #endregion
         
-        private void Start()
-        {
-            // CallBanner();
-
-            CallInterstitial();
-
-            //CallRewarded();
-        }
-
         #region Banner
 
         [Header("BANNER")]
